@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building & Construction</title>
+    <style>
+        /* --- Navbar Styling --- */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a, .navbar button {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            cursor: pointer;
+            background: #555;
+            transition: 0.3s;
+        }
+
+        .navbar button:hover, .navbar a:hover {
+            background: #777;
+        }
+
+        /* --- Layout Styles --- */
+        .layout-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+            gap: 20px;
+            padding: 120px 50px 50px; /* Adds space below navbar */
+            background: #f0f0f0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            overflow: hidden;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        /* Contact Server Button */
+        .contact-btn {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .contact-btn button {
+            background: #4CAF50;
+            color: white;
+            font-size: 18px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-btn button:hover {
+            background: #45a049;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: rgb(21, 18, 18);
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: rgb(110, 101, 101);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<!-- <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    <button id="viewAllBtn">View All</button>
+</div> -->
+
+<!-- Contact Server Button -->
+<!-- <div class="contact-btn">
+    <button onclick="contactServer()">📞 Contact Server</button>
+</div> -->
+
+<!-- 4x4 Grid Layout -->
+<div class="layout-container">
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC3fPuqcwHAd2xB77LSmssZqYo2fDRfgADzw&s" alt="Pipes">
+        <h2>Metal Pipe & Plumbing Fittings</h2>
+        <ul>
+            <li>Pipe Fittings</li>
+            <li>Pipe Couplings</li>
+            <li>Pipe Elbows</li>
+            <li>Pipe Tees</li>
+        </ul>
+        <button class="btn" onclick="contactServer()">📞 Contact Server</button>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvZwCjQc-R6TnL5Xarq__8IdgQsnLen2A-IA&s" alt="Crane">
+        <h2>Cranes & Forklifts</h2>
+        <ul>
+            <li>Crane</li>
+            <li>Pulleys</li>
+            <li>Spare Parts</li>
+            <li>Forklift</li>
+        </ul>
+        <button class="btn" onclick="contactServer()">📞 Contact Server</button>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg80iAzXHfnFsK_ex75syO7kYeUaVMgu_ltw&s" alt="Construction">
+        <h2>Building Machines</h2>
+        <ul>
+            <li>Concrete Mixers</li>
+            <li>Crushing Machines</li>
+            <li>Spare Parts</li>
+        </ul>
+        <button class="btn" onclick="contactServer()">📞 Contact Server</button>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRK3I9zmyff16pRNUzFgsmG5TeWedBqSfykg&s" alt="Paint">
+        <h2>Paints & Wall Putty</h2>
+        <ul>
+            <li>Emulsion Paints</li>
+            <li>Enamel Paints</li>
+            <li>Decorative Coatings</li>
+        </ul>
+        <button class="btn" onclick="contactServer()">📞 Contact Server</button>
+    </div>
+
+    <div class="card">
+        <img src="https://www.hongteckhin.com.sg/cdn/shop/articles/Demystifying_Glue_thumbnail.jpg?v=1728630064&width=1500" alt="Adhesives">
+        <h2>Adhesives & Glue</h2>
+        <ul>
+            <li>Fevicol Adhesive</li>
+            <li>Glue</li>
+            <li>Adhesive Gum</li>
+        </ul>
+        <button class="btn" onclick="contactServer()">📞 Contact Server</button>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbdPsd-PxzQoqS1hMct6Qb8kE4QrGKtBdziQ&s" alt="Wood">
+        <h2>Wood & Laminates</h2>
+        <ul>
+            <li>Plywoods</li>
+            <li>Wood Boards</li>
+            <li>Wood Laminates</li>
+        </ul>
+        <button class="btn" onclick="contactServer()">📞 Contact Server</button>
+    </div>
+
+    <div class="card">
+        <img src="https://www.windowworld.com/uploads/images/news/HEADER_two-sides_doors_windows_window-world-hero_1980x1280.jpg" alt="Doors">
+        <h2>Doors & Windows</h2>
+        <ul>
+            <li>Metal Doors</li>
+            <li>Wooden Doors</li>
+            <li>Windows</li>
+        </ul>
+        <button class="btn" onclick="contactServer()">📞 Contact Server</button>
+    </div>
+
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/I/61eGNRlTYXL._AC_UF1000,1000_QL80_.jpg" alt="Steel">
+        <h2>Steel Pipe Fittings</h2>
+        <ul>
+            <li>Steel Pipe Fittings</li>
+            <li>Pipeline Accessories</li>
+            <li>Tube Fittings</li>
+        </ul>
+        <button class="btn" onclick="contactServer()">📞 Contact Server</button>
+    </div>
+
+</div>
+
+<script>
+    // "View All" Button Functionality
+    document.getElementById('viewAllBtn').addEventListener('click', function () {
+        alert("All items are already displayed.");
+    });
+
+    // "Contact Server" Button Functionality
+    function contactServer() {
+        alert("📞 Contacting Server...");
+        console.log("Server contacted successfully!");
+    }
+</script>
+
+</body>
+</html>

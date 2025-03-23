@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiaMART Sell Section</title>
+    <style>
+        /* --- General Styling --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Header Section --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .header img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .header-text {
+            max-width: 65%;
+        }
+
+        .header-text h1 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        .header-text p {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+
+        .stat {
+            text-align: center;
+            flex: 1;
+            padding: 20px;
+        }
+
+        .stat img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+
+        .stat h2 {
+            font-size: 24px;
+            color: #007bff;
+        }
+
+        .stat p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* --- Free Registration Section --- */
+        .registration {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f1f1f1;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+
+        .registration .text {
+            max-width: 60%;
+        }
+
+        .registration h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .registration p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .form {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .form input {
+            padding: 12px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form button {
+            padding: 12px 25px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .form button:hover {
+            background: blue;
+        }
+
+        /* --- Features Section --- */
+        .features, .steps {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .feature, .step {
+            flex: 1;
+            padding: 20px;
+            background: #f9f9f9;
+            margin: 10px;
+            text-align: center;
+            border-radius: 10px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature:hover, .step:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature img, .step img {
+            width: 70px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3, .step h3 {
+            font-size: 22px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .feature p, .step p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            .header, .registration, .features, .steps {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .stat, .feature, .step {
+                margin-bottom: 20px;
+            }
+
+            .form input {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header Section -->
+    <div class="header">
+        <div class="header-text">
+            <h1>Sell for Free on India’s Largest Online B2B Marketplace</h1>
+            <p>Connect with millions of verified buyers and grow your business without any transaction fees.</p>
+        </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6t9xRAc40H4yQ37zZDN6Fumw1IY6xKpxJJw&s" alt="Businessman">
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats">
+        <div class="stat">
+            <img src="https://png.pngtree.com/png-vector/20190320/ourmid/pngtree-vector-buyer-icon-png-image_850620.jpg" alt="Buyers">
+            <h2>20.6 crore+</h2>
+            <p>Buyers</p>
+        </div>
+        <div class="stat">
+            <img src="https://img.icons8.com/ios-filled/50/007BFF/shop.png" alt="Suppliers">
+            <h2>82 lakh+</h2>
+            <p>Suppliers</p>
+        </div>
+        <div class="stat">
+            <img src="https://img.icons8.com/ios-filled/50/007BFF/box.png" alt="Products">
+            <h2>11.5 crore+</h2>
+            <p>Products & Services</p>
+        </div>
+    </div>
+
+    <!-- Free Registration Section -->
+    <div class="registration">
+        <div class="text">
+            <h2>Free Registration/Sign In</h2>
+            <p>Enter your mobile number and start selling on IndiaMART for free.</p>
+        </div>
+
+        <div class="form">
+            <span>+91</span>
+            <input type="text" placeholder="Enter 10 digit mobile number">
+            <button>Start Selling ➝</button>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <h2 style="text-align: center; margin-bottom: 20px;">Sell on IndiaMART</h2>
+    <div class="features">
+        <div class="feature">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKogtHOv1UlpqY_AWyqAvep9m13JnbXP8INa_rIy6mzXEMj2SwtiAp_WToVZEEQRf6XLU&usqp=CAU" alt="Grow">
+            <h3>Grow your Business</h3>
+            <p>Sell to buyers anytime, anywhere</p>
+        </div>
+
+        <div class="feature">
+            <img src="https://img.icons8.com/ios-filled/50/007BFF/money-bag.png" alt="Zero Cost">
+            <h3>Zero Cost</h3>
+            <p>No commission or transaction fee</p>
+        </div>
+
+        <div class="feature">
+            <img src="https://img.icons8.com/ios-filled/50/007BFF/settings.png" alt="Manage">
+            <h3>Manage your Business Better</h3>
+            <p>Lead Management System & more</p>
+        </div>
+    </div>
+
+    <!-- Steps Section -->
+    <h2 style="text-align: center; margin: 40px 0;">Get a Free Listing in 3 Simple Steps</h2>
+    <div class="steps">
+        <div class="step">
+            <img src="https://cdn0.iconfinder.com/data/icons/thin-line-color-2/21/01_1-512.png" alt="Create">
+            <h3><a href="#.html">Create Account</h3></a>
+            <p>Add your name & phone to get started</p>
+        </div>
+
+        <div class="step">
+            <img src="https://img.icons8.com/ios-filled/50/007BFF/map-marker.png" alt="Add Business">
+            <h3><a href="#.html">Add Business</h3></a>
+            <p>Add name, address, & email of your company</p>
+        </div>
+
+        <div class="step">
+            <img src="https://img.icons8.com/ios-filled/50/007BFF/shop.png" alt="Add Products">
+            <h3><a href="#.html">Add products and services</h3></a>
+            <p>Minimum 3 products/services required</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

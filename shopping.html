@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiaMART Winter Section</title>
+
+    <style>
+        /* --- General Styles --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- Navbar Section --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: lightgray;
+            padding: 15px 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar img {
+            height: 40px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-box input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-box button {
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .search-box button:hover {
+            background: gray;
+        }
+
+        .bulk-btn {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .bulk-btn:hover {
+            background: gray;
+        }
+
+        /* --- Categories Section --- */
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 30px;
+            background: white;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .category img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .category p {
+            font-size: 14px;
+            color: #444;
+        }
+
+        .category:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- Winter Sale Section --- */
+        .winter-sale {
+            background: url('https://cdn.pixabay.com/photo/2017/11/26/20/45/snowflake-2978596_1280.png') no-repeat center/cover;
+            color: #333;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .winter-sale h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            width: 180px;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .product img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .product p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .search-box {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+
+            .categories {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product {
+                width: 100%;
+            }
+        }
+        .section {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.section-header img {
+    width: 40px;
+    height: 40px;
+}
+
+.section-header h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* --- Ladies Wear Section --- */
+.products-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.price {
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.discount {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-card {
+        width: 90%;
+    }
+}
+.btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: black;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: gray;
+            color:wheat;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/IndiaMart_Logo.png" alt="IndiaMART Logo">
+    
+    <div class="search-box">
+        <button>Shop</button>
+        <input type="text" placeholder="What are you looking for?">
+        <button>Search</button>
+    </div>
+
+    <a href="#" class="bulk-btn">Bulk Requirement</a>
+</div>
+
+<!-- Categories -->
+<div class="categories">
+    <div class="category">
+        <a href="#ladies-wear" class="category"></a>
+        
+        <img src="https://cdn-icons-png.flaticon.com/128/3081/3081648.png" alt="Ladies Wear">
+        <p>Ladies Wear</p>
+    </div>
+    <div class="category">
+        <img src="https://cdn-icons-png.flaticon.com/128/3081/3081705.png" alt="Men Wear">
+        <p>Men Wear</p>
+    </div>
+    <div class="category">
+        <img src="https://cdn-icons-png.flaticon.com/128/3081/3081691.png" alt="Footwear">
+        <p>Footwear</p>
+    </div>
+    <div class="category">
+        <img src="https://cdn-icons-png.flaticon.com/128/1033/1033926.png" alt="Mobile Accessories">
+        <p>Mobile Accessories</p>
+    </div>
+    <div class="category">
+        <img src="https://cdn-icons-png.flaticon.com/128/3081/3081636.png" alt="Kids Toys">
+        <p>Kids Toys</p>
+    </div>
+    <div class="category">
+        <img src="https://cdn-icons-png.flaticon.com/128/3081/3081659.png" alt="Night Lamps">
+        <p>Night Lamps</p>
+    </div>
+    <div class="category">
+        <img src="https://cdn-icons-png.flaticon.com/128/3081/3081684.png" alt="Beauty Products">
+        <p>Beauty Products</p>
+    </div>
+</div>
+
+<!-- Winter Sale Section -->
+<div class="winter-sale">
+    <h2>Stay Cozy, Shop Smart this Winter on IndiaMART</h2>
+
+    <div class="product-container">
+        <div class="product">
+            <img src="https://cdn-icons-png.flaticon.com/128/3064/3064355.png" alt="Night Lamp">
+            <p>Night Lamp</p>
+        </div>
+        <div class="product">
+            <img src="https://cdn-icons-png.flaticon.com/128/3064/3064327.png" alt="Earbuds">
+            <p>Earbuds</p>
+        </div>
+        <div class="product">
+            <img src="https://cdn-icons-png.flaticon.com/128/3064/3064298.png" alt="Toys">
+            <p>Toys</p>
+        </div>
+        <div class="product">
+            <img src="https://cdn-icons-png.flaticon.com/128/3064/3064273.png" alt="Skin Serum">
+            <p>Skin Serum</p>
+        </div>
+        <div class="product">
+            <img src="https://cdn-icons-png.flaticon.com/128/3064/3064330.png" alt="Car Phone Holder">
+            <p>Car Phone Holder</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Ladies Wear Section -->
+<div class="section">
+<div class="section-header">
+<img src="https://cdn-icons-png.flaticon.com/128/3081/3081648.png" alt="Ladies Wear Icon">
+<h2>Ladies Wear</h2>
+</div>
+
+<div class="products-container">
+<!-- Product 1 -->
+<div class="product-card">
+    <img src="https://5.imimg.com/data5/ECOM/Default/2025/2/487801709/QC/PD/MG/115279813/img-20230317-wa0049.jpg" alt="Product 1">
+    <div class="product-info">
+        <h3>Cherry Red Premium Ethnic <br>Co-ord Set / Ess257</h3>
+        <div>
+            <span class="price">₹1,150</span>
+            <span class="original-price">₹1,799</span>
+            <span class="discount">-36%</span>
+            <br>
+            <button class="btn">Contact Server</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 2 -->
+<div class="product-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRZMZzS86pWoqBWn9h5lD2rkIZjhFqNHnxRw&s" alt="Product 2">
+    <div class="product-info">
+        <h3>Srishti Textile Pure Cotton <br> Bluish Floral Handblock</h3>
+        <div>
+            <span class="price">₹699</span>
+            <span class="original-price">₹1,599</span>
+            <span class="discount">-56%</span>
+            <br>
+            <button class="btn">Contact Server</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 3 -->
+<div class="product-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRhgm32wHBxPDiAlGjrheA8zSmoTVUEpLag&s" alt="Product 3">
+    <div class="product-info">
+        <h3>One Off Shoulder Marble <br>Print Co-ord Set</h3>
+        <div>
+            <span class="price">₹3,500</span>
+        </div>
+        
+        <button class="btn">Contact Server</button>
+    </div>
+   
+</div>
+
+<!-- Product 4 -->
+<div class="product-card">
+    <img src="https://nolabels.in/cdn/shop/files/224_ebebabda-cd57-42c2-94bc-a10578f6a33f.jpg?v=1717402327&width=1080" alt="Product 4">
+    <div class="product-info">
+        <h3>Casual Co-ord <br>Set for Women</h3>
+        <div>
+            <span class="price">₹1,200</span>
+            <span class="original-price">₹2,000</span>
+            <span class="discount">-40%</span>
+            <br>
+        <button class="btn">Contact Server</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 5 -->
+<div class="product-card">
+    <img src="https://varanga.in/cdn/shop/files/1_82da14e0-fbe3-4640-9b0e-c3861834ca4f.jpg?v=1706523942" alt="Product 5">
+    <div class="product-info">
+        <h3>Purely cotton <br> Black Co-ord Set</h3>
+        <div>
+            <span class="price">₹2,499</span>
+            <span class="original-price">₹3,999</span>
+            <span class="discount">-38%</span>
+            <br>
+        <button class="btn">Contact Server</button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
